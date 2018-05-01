@@ -10,13 +10,12 @@
   ],
   "author": {
     "name": "OpenShift",
-    "email": "ramr@example.org",
-    "url": "http://www.openshift.com/"
-  },
-  "homepage": "http://www.openshift.com/",
+    "email": "ramr@example.org"
+      },
+  
   "repository": {
     "type": "git",
-    "url": "https://github.com/openshift/origin-server"
+    "url": "https://github.com/ymcat1234/kdict"
   },
   "engines": {
     "node": ">= 0.6.0",
@@ -29,5 +28,9 @@
   "devDependencies": {},
   "bundleDependencies": [],
   "private": true,
-  "main": "server.js"
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node main.js"
+  },
 }
