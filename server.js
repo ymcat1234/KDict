@@ -3,7 +3,15 @@ var kutil = require('./util/kutil.js');
 var wechat = require('wechat');
 
 var server_port = process.env.OPENSHIFT_NODEJS_PORT || 8080
-var server_ip_address = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1'
+//var server_ip_address = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1'
+
+var server_ip_address = process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0'
+;
+//
+// web API
+app.get('/t/:word', function (re
+    q, res) {
+    var
 
 var client_id_secret = kutil.readJsonFromFile('./res/client_id_secret.json');
 var wechat_app_config = kutil.readJsonFromFile('./res/wechat_app_config.json');
@@ -17,11 +25,19 @@ app.listen(server_port, server_ip_address);
 app.get('/', function (req, res) {
     res.send('welcome to kdict server');
 });
-
+//
 // web API
-app.get('/t/:word', function (req, res) {
+app.get('/t/:word', function (re
+    q, res) {
     var input_word = req.param('word');
-    bt.translate(input_word, 'en', 'zh-CHS', function (translate_err, translate_res) {
+    bt.
+    var server_ip_address = process.env.OPENSHIFT_NODEJS_IP 0'127.0.0.1'
+;
+//
+// web API
+app.get('/t/:word', function (re
+    q, res) {
+    vartranslate(input_word, 'en', 'zh-CHS', function (translate_err, translate_res) {
         if (translate_err) {
             res.writeHead(404);
             res.end(JSON.stringify(translate_err));
